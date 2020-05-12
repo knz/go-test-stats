@@ -1,0 +1,451 @@
+total number of packages: 411
+total number of tests: 3652
+total number of subtests: 32962
+
+packages with longest test durations:
+       1845 (30m45s) sql/logictest
+        919 (15m19s) sql/opt/memo
+        206  (3m26s) sql
+        193  (3m13s) kv/kvserver
+        159  (2m39s) cli
+        119  (1m59s) sql/opt/xform
+        109  (1m49s) sql/sem/tree
+        106  (1m46s) ccl/changefeedccl
+        104  (1m44s) ccl/partitionccl
+         97  (1m37s) sql/colexec
+         88  (1m28s) ccl/backupccl
+         81  (1m21s) server
+         71  (1m11s) sql/opt/norm
+         71  (1m11s) sql/opt/optbuilder
+         60   (1m0s) ccl/importccl
+         56  (0m56s) sql/opt/exec/execbuilder
+         48  (0m48s) util/log
+         36  (0m36s) storage
+         28  (0m28s) kv/kvserver/concurrency
+         28  (0m28s) sql/tests
+         25  (0m25s) ccl/workloadccl/allccl
+         25  (0m25s) storage/metamorphic
+         24  (0m24s) sql/pgwire
+         24  (0m24s) sql/sqlbase
+         22  (0m22s) kv/kvserver/tscache
+         22  (0m22s) sql/row
+         21  (0m21s) sql/sem/builtins
+         21  (0m21s) sql/stats
+         18  (0m18s) kv/kvclient/kvcoord
+         16  (0m16s) workload/ycsb
+
+packages with largest test logs:
+   22211879 (21.2 MiB) sql/opt/memo
+    9292135 (8.9 MiB) kv/kvserver
+    7785542 (7.4 MiB) sql
+    4791484 (4.6 MiB) sql/logictest
+    4476352 (4.3 MiB) server
+    4219379 (4.0 MiB) ccl/backupccl
+    3487120 (3.3 MiB) sql/opt/xform
+    3330164 (3.2 MiB) ccl/partitionccl
+    2581554 (2.5 MiB) ccl/importccl
+    2519046 (2.4 MiB) sql/colexec
+    2122567 (2.0 MiB) sql/sem/tree
+    2025964 (1.9 MiB) sql/opt/norm
+    1894349 (1.8 MiB) sql/opt/optbuilder
+    1657385 (1.6 MiB) storage/metamorphic
+    1311817 (1.3 MiB) ccl/changefeedccl
+    1310786 (1.3 MiB) storage
+    1118506 (1.1 MiB) sql/pgwire
+     795104 (776.5 KiB) sql/stats
+     625479 (610.8 KiB) sql/tests
+     519193 (507.0 KiB) kv/kvserver/concurrency
+     507614 (495.7 KiB) ccl/workloadccl/allccl
+     443990 (433.6 KiB) kv/kvserver/reports
+     431535 (421.4 KiB) kv/kvclient/kvcoord
+     380723 (371.8 KiB) sql/rowexec
+     354410 (346.1 KiB) testutils/testcluster
+     349134 (341.0 KiB) cli
+     332579 (324.8 KiB) kv/kvserver/batcheval
+     327071 (319.4 KiB) sql/schemachange
+     287135 (280.4 KiB) kv/kvnemesis
+     282119 (275.5 KiB) jobs
+
+largest memory usage (RSS peak) per package:
+ 3390808064 (3.2 GiB) sql/colexec
+ 3305373696 (3.1 GiB) sql/sem/builtins
+ 3281379328 (3.1 GiB) util/log
+ 3264532480 (3.0 GiB) sql/row
+ 3202813952 (3.0 GiB) sql/sem/tree
+ 3201449984 (3.0 GiB) sql/colencoding
+ 3153645568 (2.9 GiB) sql/sqlbase
+ 2501480448 (2.3 GiB) sql/logictest
+ 2186129408 (2.0 GiB) jobs
+ 2122203136 (2.0 GiB) testutils/testcluster
+ 2119991296 (2.0 GiB) ts
+ 2116173824 (2.0 GiB) ccl/logictestccl
+ 2074685440 (1.9 GiB) ccl/serverccl
+ 2043129856 (1.9 GiB) kv/kvserver/protectedts/ptverifier
+ 2040934400 (1.9 GiB) sql
+ 2030141440 (1.9 GiB) kv/kvserver
+ 2015408128 (1.9 GiB) ccl/cliccl
+ 1923899392 (1.8 GiB) ccl/changefeedccl/kvfeed
+ 1894027264 (1.8 GiB) ccl/workloadccl/allccl
+ 1877299200 (1.7 GiB) sql/tests
+ 1868828672 (1.7 GiB) sql/physicalplan
+ 1843073024 (1.7 GiB) server
+ 1837613056 (1.7 GiB) internal/sqlsmith
+ 1821863936 (1.7 GiB) sql/pgwire
+ 1769787392 (1.6 GiB) sqlmigrations
+ 1768607744 (1.6 GiB) sql/stats
+ 1764368384 (1.6 GiB) sql/distsql
+ 1756225536 (1.6 GiB) workload/workloadsql
+ 1748316160 (1.6 GiB) sql/opt/bench
+ 1738117120 (1.6 GiB) kv/bulk
+
+largest CPU usage per package:
+    1752.10    (18c) kv/kvserver
+     815.00     (9c) util/log
+     809.10     (9c) sql/row
+     791.20     (8c) sql/colencoding
+     767.20     (8c) sql/sem/builtins
+     719.60     (8c) sql/sem/tree
+     692.00     (7c) ccl/importccl
+     686.80     (7c) sql/sqlbase
+     636.20     (7c) sql/tests
+     628.80     (7c) kv/kvserver/reports
+     602.20     (7c) sql/colexec
+     541.70     (6c) sql/logictest
+     534.70     (6c) ccl/workloadccl/allccl
+     509.70     (6c) ccl/backupccl
+     481.50     (5c) sql
+     461.40     (5c) cli
+     438.30     (5c) testutils/testcluster
+     414.70     (5c) ccl/partitionccl
+     410.20     (5c) internal/sqlsmith
+     401.60     (5c) kv/kvserver/tscache
+     391.70     (4c) sql/opt/exec/execbuilder
+     377.30     (4c) kv/kvserver/batcheval
+     360.10     (4c) kv/kvnemesis
+     353.60     (4c) sql/schemachange
+     352.00     (4c) keys
+     336.90     (4c) server
+     325.90     (4c) sql/gcjob_test
+     321.40     (4c) sql/physicalplan
+     316.70     (4c) kv/kvserver/protectedts/ptstorage
+     311.40     (4c) workload/workloadsql
+
+largest number of tests per package:
+        610          kv/kvserver
+        312          sql
+        188          kv/kvclient/kvcoord
+        174          storage
+        117          server
+         99          sql/colexec
+         81          cli
+         79          sql/sem/tree
+         73          roachpb
+         68          ccl/backupccl
+         51          gossip
+         51          ccl/changefeedccl
+         49          util/encoding
+         47          sql/sqlbase
+         46          sql/sem/builtins
+         45          ccl/importccl
+         43          kv
+         39          sql/rowexec
+         38          util/log
+         37          sql/pgwire
+         35          ts
+         33          util/json
+         29          rpc
+         28          sql/opt/constraint
+         26          util/interval
+         26          sql/opt/props
+         25          kv/kvserver/tscache
+         25          sql/parser
+         23          sql/opt/memo
+         22          keys
+
+largest number of subtests per package:
+      10205          sql/colexec
+       4414          sql/logictest
+       2060          server
+       1734          sql/sem/tree
+       1178          util/json
+       1107          sql/parser
+       1045          storage
+        967          kv/kvserver
+        770          sql
+        742          sql/pgwire
+        686          sql/sem/builtins
+        662          geo/geogfn
+        601          sql/rowexec
+        463          util/encoding
+        328          sql/sqlbase
+        301          kv/kvclient/kvcoord
+        274          sql/row
+        263          sql/physicalplan
+        246          ccl/importccl
+        213          cli
+        206          ccl/changefeedccl
+        197          kv/kvserver/batcheval
+        196          util/bitarray
+        190          col/coldata
+        179          kv/kvserver/tscache
+        171          sql/types
+        141          sql/opt/memo
+        122          roachpb
+        119          ccl/storageccl
+        118          keys
+
+packages with largest average time per test:
+       1845 (30m45s) sql/logictest
+         56  (0m56s) sql/opt/exec/execbuilder
+         39  (0m39s) sql/opt/memo
+         23  (0m23s) sql/opt/optbuilder
+         13  (0m13s) sql/opt/xform
+         13  (0m13s) ccl/partitionccl
+         13  (0m13s) sql/gcjob_test
+         10  (0m10s) sql/opt/norm
+         10  (0m10s) ccl/logictestccl
+          8   (0m8s) storage/metamorphic
+          8   (0m8s) sql/schemachange
+          8   (0m8s) sql/colencoding
+          8   (0m8s) acceptance
+          6   (0m6s) ccl/workloadccl/allccl
+          6   (0m6s) internal/sqlsmith
+          6   (0m6s) util/ring
+          4   (0m4s) ccl/utilccl/sampledataccl
+          4   (0m4s) sql/opt/idxconstraint
+          4   (0m4s) sql/opt/optgen/cmd/optgen
+          4   (0m4s) sql/opt/testutils/opttester
+          4   (0m4s) workload/ycsb
+          3   (0m3s) ccl/serverccl
+          3   (0m3s) workload/bank
+          3   (0m3s) kv/kvserver/protectedts/ptverifier
+          3   (0m3s) ccl/changefeedccl/kvfeed
+          3   (0m3s) sql/opt/bench
+          3   (0m3s) cmd/cockroach-oss
+          3   (0m3s) jobs/jobsprotectedts
+          3   (0m3s) ccl/cliccl
+          3   (0m3s) cmd/cockroach-short
+
+packages with largest avg log sizes per test:
+    4791484 (4.6 MiB) sql/logictest
+     965733 (943.1 KiB) sql/opt/memo
+     631449 (616.7 KiB) sql/opt/optbuilder
+     552461 (539.5 KiB) storage/metamorphic
+     416270 (406.5 KiB) ccl/partitionccl
+     387457 (378.4 KiB) sql/opt/xform
+     327071 (319.4 KiB) sql/schemachange
+     289423 (282.6 KiB) sql/opt/norm
+     126903 (123.9 KiB) ccl/workloadccl/allccl
+     108339 (105.8 KiB) sql/opt/testutils/opttester
+     106867 (104.4 KiB) sql/gcjob_test
+     105448 (103.0 KiB) sql/opt/exec/execbuilder
+     100567 (98.2 KiB) sql/opt/optgen/cmd/optgen
+     100273 (97.9 KiB) internal/sqlsmith
+      88602 (86.5 KiB) testutils/testcluster
+      86298 (84.3 KiB) sql/colencoding
+      84886 (82.9 KiB) sql/opt/idxconstraint
+      83450 (81.5 KiB) ccl/serverccl
+      62400 (60.9 KiB) ccl/utilccl/sampledataccl
+      62049 (60.6 KiB) ccl/backupccl
+      57367 (56.0 KiB) ccl/importccl
+      52234 (51.0 KiB) workload/workloadsql
+      52164 (50.9 KiB) kv/bulk
+      41019 (40.1 KiB) kv/kvnemesis
+      38621 (37.7 KiB) sql/physicalplan
+      38259 (37.4 KiB) server
+      37862 (37.0 KiB) sql/stats
+      37085 (36.2 KiB) kv/kvserver/concurrency
+      36792 (35.9 KiB) sql/tests
+      34862 (34.0 KiB) sql/opt/optgen/exprgen
+
+tests with longest test durations:
+       1843 (30m43s) sql/logictest.TestLogic
+        881 (14m41s) sql/opt/memo.TestStatsQuality
+         83  (1m23s) sql/opt/xform.TestExternal
+         82  (1m22s) sql/sem/tree.TestEval
+         70  (1m10s) sql/opt/norm.TestNormRules
+         69   (1m9s) sql/opt/optbuilder.TestBuilder
+         54  (0m54s) ccl/partitionccl.TestRepartitioning
+         54  (0m54s) sql/opt/exec/execbuilder.TestExecBuild
+         47  (0m47s) cli.Example_demo
+         46  (0m46s) ccl/partitionccl.TestInitialPartitioning
+         33  (0m33s) cli.TestRemoveDeadReplicas
+         28  (0m28s) sql.TestMigrateSchemaChanges
+         25  (0m25s) sql/opt/xform.TestRules
+         22  (0m22s) storage/metamorphic.TestRocksPebbleEquivalence
+         21  (0m21s) cli.TestDumpData
+         19  (0m19s) server.TestMultiRangeScanWithPagination
+         19  (0m19s) storage.TestMVCCHistories
+         18  (0m18s) ccl/importccl.TestImportIntoCSV
+         18  (0m18s) sql/opt/memo.TestStats
+         17  (0m17s) ccl/changefeedccl.TestChangefeedSchemaChangeNoBackfill
+         17  (0m17s) sql/opt/memo.TestLogicalProps
+         14  (0m14s) cli.Example_demo_locality
+         13  (0m13s) ccl/changefeedccl.TestChangefeedSchemaChangeAllowBackfill
+         13  (0m13s) ccl/changefeedccl.TestChangefeedNemeses
+         13  (0m13s) sql/colexec.TestExternalSortRandomized
+         12  (0m12s) kv/kvserver.TestReplicateQueueRebalance
+         12  (0m12s) sql.TestMonotonic
+         12  (0m12s) sql/colexec.TestAggregatorRandom
+         12  (0m12s) sql/gcjob_test.TestSchemaChangeGCJob
+         12  (0m12s) sql/tests.TestMonotonicInserts
+
+tests with largest test logs:
+   21037708 (20.1 MiB) sql/opt/memo.TestStatsQuality
+    4791292 (4.6 MiB) sql/logictest.TestLogic
+    2518936 (2.4 MiB) sql/opt/xform.TestExternal
+    2023153 (1.9 MiB) sql/opt/norm.TestNormRules
+    1886383 (1.8 MiB) sql/opt/optbuilder.TestBuilder
+    1791575 (1.7 MiB) sql/sem/tree.TestEval
+    1663978 (1.6 MiB) ccl/partitionccl.TestRepartitioning
+    1632593 (1.6 MiB) server.TestMultiRangeScanWithPagination
+    1579784 (1.5 MiB) ccl/partitionccl.TestInitialPartitioning
+    1517147 (1.4 MiB) storage/metamorphic.TestRocksPebbleEquivalence
+    1077027 (1.0 MiB) sql.TestMigrateSchemaChanges
+     710065 (693.4 KiB) storage.TestMVCCHistories
+     702610 (686.1 KiB) kv/kvserver.TestReplicateQueueRebalance
+     679265 (663.3 KiB) sql/opt/xform.TestRules
+     583521 (569.8 KiB) kv/kvserver.TestAllocatorFullDisks
+     565070 (551.8 KiB) sql/opt/memo.TestStats
+     562827 (549.6 KiB) ccl/importccl.TestImportIntoCSV
+     513465 (501.4 KiB) sql/opt/memo.TestLogicalProps
+     507051 (495.2 KiB) kv/kvserver.TestDecommission
+     435649 (425.4 KiB) kv/kvserver.TestSystemZoneConfigs
+     393828 (384.6 KiB) kv/kvserver.TestRemovePlaceholderRace
+     387677 (378.6 KiB) kv/kvserver.TestLargeUnsplittableRangeReplicate
+     377224 (368.4 KiB) sql/colexec.TestExternalHashJoiner
+     361297 (352.8 KiB) sql/stats.TestDefaultColumns
+     342928 (334.9 KiB) ccl/importccl.TestMultiNodeExportStmt
+     323469 (315.9 KiB) kv/kvserver.TestReplicateQueueDownReplicate
+     320596 (313.1 KiB) sql/schemachange.TestColumnConversions
+     308521 (301.3 KiB) kv/kvserver/reports.TestConstraintConformanceReportIntegration
+     305592 (298.4 KiB) sql.TestAmbiguousCommit
+     302705 (295.6 KiB) sql/pgwire.TestPGTest
+
+largest memory usage (RSS peak) per test:
+ 3201449984 (3.0 GiB) sql/colencoding.TestDecodeTableValueToCol
+ 2501480448 (2.3 GiB) sql/logictest.TestLogic
+ 2030141440 (1.9 GiB) kv/kvserver.TestLargeUnsplittableRangeReplicate
+ 2020032512 (1.9 GiB) kv/kvserver.TestReplicaRangefeedNudgeSlowClosedTimestamp
+ 1999466496 (1.9 GiB) kv/kvserver.TestReplicateQueueRebalance
+ 1988374528 (1.9 GiB) kv/kvserver.TestReplicateQueueDownReplicate
+ 1984258048 (1.8 GiB) kv/kvserver.TestReplicaRangefeedPushesTransactions
+ 1979252736 (1.8 GiB) kv/kvserver.TestReplicateQueueUpReplicate
+ 1978527744 (1.8 GiB) kv/kvserver.TestTransferLeaseToLaggingNode
+ 1968615424 (1.8 GiB) kv/kvserver.TestLearnerAndJointConfigAdminMerge
+ 1952403456 (1.8 GiB) kv/kvserver.TestLearnerOrJointConfigAdminRelocateRange
+ 1932185600 (1.8 GiB) kv/kvserver.TestLearnerReplicateQueueRace
+ 1926946816 (1.8 GiB) kv/kvserver.TestJointConfigLease
+ 1925029888 (1.8 GiB) kv/kvserver.TestLearnerAdminChangeReplicasRace
+ 1924866048 (1.8 GiB) kv/kvserver.TestReplicateQueueSeesLearnerOrJointConfig
+ 1918627840 (1.8 GiB) kv/kvserver.TestNodeLivenessStatusMap
+ 1917022208 (1.8 GiB) kv/kvserver.TestLearnerAndJointConfigFollowerRead
+ 1913966592 (1.8 GiB) kv/kvserver.TestSplitWithLearnerOrJointConfig
+ 1911869440 (1.8 GiB) kv/kvserver.TestReplicaGCQueueSeesLearnerOrJointConfig
+ 1900433408 (1.8 GiB) kv/kvserver.TestLearnerRaftConfState
+ 1900392448 (1.8 GiB) kv/kvserver.TestLearnerSnapshotFailsRollback
+ 1900081152 (1.8 GiB) kv/kvserver.TestAddReplicaViaLearner
+ 1894027264 (1.8 GiB) ccl/workloadccl/allccl.TestAllRegisteredSetup
+ 1892986880 (1.8 GiB) kv/kvserver.TestSendFailureToConnectDoesNotHangRaft
+ 1886674944 (1.8 GiB) kv/kvserver.TestLearnerNoAcceptLease
+ 1880944640 (1.8 GiB) kv/kvserver.TestRaftSnapshotQueueSeesLearner
+ 1880125440 (1.8 GiB) kv/kvserver.TestLogRebalances
+ 1853972480 (1.7 GiB) sql.TestCascadingZoneConfig
+ 1844068352 (1.7 GiB) sql.TestReacquireLeaseOnRestart
+ 1843224576 (1.7 GiB) sql.TestDistSQLRetryableError
+
+largest CPU usage per test:
+    1752.10    (18c) kv/kvserver.TestRemovePlaceholderRace
+    1723.60    (18c) kv/kvserver.TestReplicaGCRace
+    1709.60    (18c) kv/kvserver.TestDecommission
+    1504.60    (16c) kv/kvserver.TestAdminRelocateRange
+    1474.10    (15c) kv/kvserver.TestRaftRemoveRace
+    1329.90    (14c) kv/kvserver.TestReplicateQueueDownReplicate
+    1304.60    (14c) kv/kvserver.TestReplicateQueueUpReplicate
+    1239.80    (13c) kv/kvserver.TestReplicaRemovalClosesProposalQuota
+    1230.80    (13c) kv/kvserver.TestLargeUnsplittableRangeReplicate
+    1213.90    (13c) kv/kvserver.TestReplicateQueueRebalance
+    1197.30    (12c) kv/kvserver.TestReplicaLazyLoad
+    1195.40    (12c) kv/kvserver.TestReplicaTooOldGC
+    1191.10    (12c) kv/kvserver.TestRemovedReplicaError
+    1188.50    (12c) kv/kvserver.TestLeaseHolderRemoveSelf
+    1185.40    (12c) kv/kvserver.TestReplicateRemovedNodeDisruptiveElection
+    1184.80    (12c) kv/kvserver.TestReplicateRogueRemovedNode
+    1184.10    (12c) kv/kvserver.TestTransferRaftLeadership
+    1182.10    (12c) kv/kvserver.TestFailedConfChange
+    1179.20    (12c) kv/kvserver.TestStoreRangeWaitForApplication
+    1178.30    (12c) kv/kvserver.TestRangeQuiescence
+    1178.20    (12c) kv/kvserver.TestRaftBlockedReplica
+    1177.10    (12c) kv/kvserver.TestProcessSplitAfterRightHandSideHasBeenRemoved
+    1166.30    (12c) kv/kvserver.TestDefaultConnectionDisruptionDoesNotInterfereWithSystemTraffic
+    1160.10    (12c) kv/kvserver.TestTransferLeaseToLaggingNode
+    1157.50    (12c) kv/kvserver.TestReplicateReAddAfterDown
+    1149.00    (12c) kv/kvserver.TestTracingDoesNotRaceWithCancelation
+    1133.90    (12c) kv/kvserver.TestInitRaftGroupOnRequest
+    1126.00    (12c) kv/kvserver.TestAckWriteBeforeApplication
+    1111.50    (12c) kv/kvserver.TestStoreRangeRemovalCompactionSuggestion
+    1109.20    (12c) kv/kvserver.TestRaftAfterRemoveRange
+
+largest number of subtests per test:
+       4414          sql/logictest.TestLogic
+       2994          sql/colexec.TestHashJoiner
+       2236          sql/colexec.TestExternalHashJoiner
+       1910          server.TestMultiRangeScanWithPagination
+       1796          sql/colexec.TestMergeJoiner
+        540          sql/colexec.TestExternalSort
+        538          sql/sem/builtins.TestHelpFunctions
+        458          sql/pgwire.TestPGPreparedQuery
+        422          sql/parser.TestParse2
+        412          geo/geogfn.TestDWithin
+        320          sql/rowexec.TestHashJoiner
+        296          storage.TestMVCCIncrementalIterator
+        282          util/json.TestFilesEncode
+        271          sql/parser.TestContextualHelp
+        270          sql/colexec.TestWindowFunctions
+        260          sql/colexec.TestDistinct
+        255          sql/row.TestNextRowInterleaved
+        248          sql/physicalplan.TestDistAggregationTable
+        236          sql.TestStatementReuses
+        201          sql/sem/tree.TestNormalizeExpr
+        178          sql/colexec.TestAndOrOps
+        176          util/encoding.TestEncodeDecimal
+        171          sql/colexec.TestAggregatorOneFunc
+        170          col/coldata.TestNullsSet
+        168          util/json.TestConcat
+        165          sql/sem/tree.TestTypeCheckError
+        164          sql/sem/tree.TestEval
+        162          sql/sem/tree.TestPrettyDataShort
+        152          kv/kvserver/tscache.TestTimestampCacheLayeredIntervals
+        149          sql.TestUseInterleavedJoin
+
+subtests with longest test durations:
+        870 (14m30s) sql/opt/memo.TestStatsQuality/tpch
+         44  (0m44s) sql/opt/xform.TestExternal/tpch
+         40  (0m40s) sql/opt/memo.TestStatsQuality/tpch/q18
+         40  (0m40s) sql/opt/memo.TestStatsQuality/tpch/q02
+         40  (0m40s) sql/opt/memo.TestStatsQuality/tpch/q21
+         40  (0m40s) sql/opt/memo.TestStatsQuality/tpch/q09
+         40  (0m40s) sql/opt/memo.TestStatsQuality/tpch/q07
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q03
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q17
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q22
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q01
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q08
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q20
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q16
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q14
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q10
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q04
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q12
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q06
+         39  (0m39s) sql/opt/memo.TestStatsQuality/tpch/q13
+         38  (0m38s) sql/opt/memo.TestStatsQuality/tpch/q11
+         38  (0m38s) sql/opt/memo.TestStatsQuality/tpch/q19
+         38  (0m38s) sql/opt/memo.TestStatsQuality/tpch/q05
+         38  (0m38s) sql/opt/memo.TestStatsQuality/tpch/q15
+         28  (0m28s) sql/sem/tree.TestEval/sql
+         20  (0m20s) cli.TestRemoveDeadReplicas/2/4/r=4
+         19  (0m19s) sql/sem/tree.TestEval/no-opt
+         19  (0m19s) sql/sem/tree.TestEval/vectorized
+         18  (0m18s) storage/metamorphic.TestRocksPebbleEquivalence/seed=456
+         18  (0m18s) server.TestMultiRangeScanWithPagination/#01
