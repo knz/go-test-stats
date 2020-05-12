@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+shpid=$$
+pgid=$(ps -o pgid= $shpid)
+echo "Monitoring pgid $pgid..."
+f=$(mktemp)
+trap "rm -f $f" EXIT
+
+mem() {
+  ps -o pgid= -o rss= -o pcpu= -o nlwp= | awk "{if (\$1==$pgid){a+=\$2;b+=\$3;c+=\$4}}END{printf(\"%10d %5.1f %3d\\n\",a,b,c)}"
+}
+
+(
+  while test -e $f; do
+  	sleep 2
+	mem=$(mem)
+        secs=$(date +%s)
+	#	line=$(cat $f)
+	printf '%s %s ...\n' "$secs" "$mem"
+  done
+)&
+
+
+while read line; do
+	  printf '%s\n' "$line" > $f
+	  mem=$(mem)
+	  secs=$(date +%s)
+	  printf '%s %s %s\n' "$secs" "$mem" "$line"
+done
